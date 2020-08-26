@@ -1,0 +1,61 @@
+.formulaire{
+    width: 500px;
+    height: auto;
+    text-align: left;
+    box-shadow: 0px 5px 5px silver;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
+ }
+
+ .formulaire span{
+     display: block;
+ }
+
+ .formulaire input{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: solid 1px silver;
+    text-align: center;
+    height: 25px;
+    font-size: 1em;
+}
+
+.formulaire textarea{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: solid 1px silver;
+    text-align: center;
+    font-size: 1em;
+}
+
+.formulaire div{
+    width: 90%;
+    margin: 20px auto;
+}
+
+.button{
+    width: 90%;
+    height: auto;
+}
+
+#button{
+    height: 40px;
+    width: 250px;
+    display: block;
+    color: white;
+    background-color: #34606a;
+    border-radius: 5px;
+    margin: 0 auto;
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+#button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 10px silver;
+}

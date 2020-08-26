@@ -1,0 +1,61 @@
+easy_admin:
+    list:
+            # allow deleting multiple items at once ...
+        batch_actions: ['delete']
+    site_name: 'Titouan Morvan Admin'
+    design:
+        brand_color: '#34606a'
+
+        menu:
+            - { entity: 'Customer', label: 'Compétence Front', icon: 'cubes' }
+            - { entity: 'Competences1', label: 'Compétence Back', icon: 'atom' }
+            - { entity: 'Projets', label: 'Projets', icon: 'book' }
+    entities:
+        Customer:
+            class: App\Entity\Competences
+            label: "Competences"
+            list: 
+                title: "Competences"
+                fields: 
+                    - { property: 'id', label: 'ID' }
+                    - { property: 'titre', label: 'Titre' }
+                    - { property: 'images', label: 'Image', type: 'file' }
+            form: 
+                fields: 
+                     - { property: 'titre', label: 'Titre' }
+                     - { property: 'image', label: 'Image', type: 'file' }
+        Projets:
+            class: App\Entity\Projets
+            label: "Projets"
+            list: 
+                title: "Projets"
+                fields: 
+                    - { property: 'titre', label: 'Titre' }
+                    - { property: 'images', label: 'Image', type: 'image' , base_path: 'images' }
+                    - { property: 'description', label: 'Description' }
+                    - { property: 'url', label: 'URL' }
+            form: 
+                fields: 
+                     - { property: 'titre', label: 'Titre' }
+                     - { property: 'imageFile', label: 'Image', type: 'vich_image', base_path: 'images' }
+                     - { property: 'description', label: 'Description' }
+                     - { property: 'url', label: 'URL' }
+        Competences1:
+            class: App\Entity\Competences1
+            label: "Competences1"
+            list: 
+                title: "Competences1"
+                fields: 
+                    - { property: 'id', label: 'ID' }
+                    - { property: 'titre', label: 'Titre' }
+                    - { property: 'image', label: 'Image', type: 'image', base_path: 'images'}
+            form: 
+                fields: 
+                     - { property: 'titre', label: 'Titre' }
+                     - { property: 'image', label: 'Image', type: 'vich_image', base_path: 'images' }
+
+        
+    
+
+        
+

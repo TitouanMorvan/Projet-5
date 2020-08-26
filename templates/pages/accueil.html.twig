@@ -1,0 +1,265 @@
+{% extends 'base.html.twig'%}
+{% block header %}
+
+  <img src="{{ asset('images/TM(7).png') }}" />
+
+{% endblock %}
+{% block body %}
+<div class="image-slide">
+  <img src="{{ asset('images/ordi1002.jpg') }}" />
+</div>
+
+  <div class="logo-slide">
+
+  <img src="{{ asset('images/TM(611).png') }}" />
+
+    <h2>DEVELOPPEUR WEB</h2>
+
+    <div class="p1">
+      <p>Titouan Morvan</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container">
+    <div class="center">
+      <button class="btn">
+        <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+          <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+          <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+        </svg>
+        <span>Compétences</span>
+      </button>
+
+    </div>
+  </div>
+
+  <div class="container1">
+    <div class="center">
+      <button class="btn">
+        <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+          <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+          <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+        </svg>
+        <span>Réalisations</span>
+      </button>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  </div>
+
+<div class="sur-competences">
+<h2>MES COMPETENCES</h2>
+<p>Découvrez toutes mes compétences !</p>
+</div>
+<div class="competences">
+  {% for competence in competences %}
+    <div class="competence">
+    
+    <img src="{{ asset('images/test1.JPG') }}" alt="" />
+    <div><p>Conception d'interfaces graphiques<br> ~~ <br><strong>FRONT-END</strong></p></div>
+    <h3>{{ competence.texte }}</h2>
+    </div>
+
+    <div class="competence1">
+
+    <img src="{{ asset('images/' ~ competences1.image) }}" alt="" />
+    
+    <img src="{{ asset('images/test2.JPG') }}" alt="" />
+    <div><p>Création de la colone vertébrale du site<br> ~~ <br><strong>BACK-END</strong></p></div>
+    <h3>{{ competence.texte }}</h2>
+    </div>
+
+
+
+
+
+
+
+  {% endfor %}
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="realisations">
+  <h2>MES REALISATIONS</h2>
+  <p>Découvrez mes réalisations et mes projets !</p>
+
+
+
+
+
+  <div class="realisation">
+
+
+  <div onclick="slideleft()" id="button-left"><i class="fas fa-arrow-left fa-2x"></i></div>
+
+  <div onclick="slideright()" id="button-right"><i class="fas fa-arrow-right fa-2x"></i></div>
+
+    <div class="slide">
+
+
+
+
+  
+
+
+  {% for projet in projets %}
+  
+    <div class="projet projetslide"> 
+    
+    <img src="{{ asset('images/' ~ projet.images) }}" alt="" />
+    <div id="mouvement"><h4>{{ projet.titre }}</h4><p><br>{{ projet.description }}</p><a href="{{ projet.url }}">Voir le site</a></div>
+
+    </div>
+            
+
+  {% endfor %}
+  </div>
+</div>
+
+
+  
+
+</div>
+
+
+
+
+
+<script>
+    
+    var nombreprojet={{competences|length}} *700;
+   
+    var curseur=0;
+
+
+  function slideright() {
+
+    if (curseur > -nombreprojet){
+    console.log("Boooooooooooooooo");
+
+      var left=curseur -700;
+
+     $( ".slide" ).css({
+       "left" : left+"px"
+     })
+
+    curseur = curseur -700;
+
+    }
+   }
+
+    function slideleft() {
+
+    if (curseur <= 0){
+      console.log("Boooooooooooooooo");
+
+      var left=curseur +700;
+
+     $( ".slide" ).css({
+       "left" : left+"px"
+     })
+
+    curseur = curseur +700;
+    }
+
+    }
+
+
+
+  
+</script>
+
+
+
+
+
+
+
+
+{% endblock %}
+
+{% block footer %}
+
+  <div class="footer1">
+    <div class="info">
+      <div class="nom">
+        <p>Titouan Morvan<br>
+        ~<br>
+        Développeur Web</p>
+      </div>
+      <div class="rs">
+        Réseaux Sociaux :
+        <a href="https://www.linkedin.com/in/titouan-morvan-06baa214b/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/1200px-LinkedIn_Logo.svg.png" alt="Logo linkedin"/></a>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

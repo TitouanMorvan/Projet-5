@@ -1,0 +1,51 @@
+{% extends 'base.html.twig'%}
+
+{% block stylesheets %}
+
+<link rel="stylesheet" href="{{ asset('style/projet5.css') }}" />
+
+{% endblock %}
+
+
+{% block header %}
+
+  <img src="{{ asset('images/TM(7).png') }}" />
+
+{% endblock %}
+
+{% block body %}
+
+  <div class="barre"></div>
+
+<div class="erreur">
+  <h2> VOUS ETES SUR LA MAUVAISE PAGE ...</h2>
+</div>
+<div class="p-erreur">
+  <p>Pour revenir sur mon site et suivre mon aventure cliquez sur ce jolie bouton</p>
+</div>
+
+<div class="bouton-erreur">
+  <a href="/#accueil">REVENIR AU SITE</a>
+</div>
+
+
+{% endblock %}
+
+{% block footer %}
+
+    <div class="footer1">
+    <div class="info">
+      <div class="nom">
+        <p>Titouan Morvan<br>
+        ~<br>
+        Développeur Web</p>
+      </div>
+      <div class="rs">
+        Réseaux Sociaux :
+        <a href="https://www.linkedin.com/in/titouan-morvan-06baa214b/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/1200px-LinkedIn_Logo.svg.png" alt="Logo linkedin"/></a>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
