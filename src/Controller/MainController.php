@@ -24,10 +24,21 @@ class MainController extends AbstractController
     public function index(CompetencesRepository $competencesrepository, ProjetsRepository $projetsrepository)
     {
         $competences = $competencesrepository->findAll();
-        $projets = $projetsrepository->findAll();
+        $projets = $projetsrepository->projetSql();
 
         return $this->render('pages/accueil.html.twig',['competences' => $competences, 'projets' => $projets]);
     }
+
+    /**
+    * @Route("/realisations", name="realisations")
+    */
+    public function realisations(ProjetsRepository $projetsrepository)
+    {
+        $projets = $projetsrepository->findAll();
+
+        return $this->render('pages/realisations.html.twig',['projets' => $projets]);
+    }
+
 
     /**
     * @Route("/contact", name="contact", methods={"GET","POST"})

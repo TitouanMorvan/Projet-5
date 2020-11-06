@@ -8,8 +8,9 @@
         <link rel="stylesheet" href="{{ asset('style/contact.css') }}" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-          <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-          <script src="https://kit.fontawesome.com/4b86c78271.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <script src="https://kit.fontawesome.com/4b86c78271.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
@@ -19,15 +20,44 @@
             {% block header %}{% endblock %}
           </figure>
 
+
+          <button class="nav__btn" type="btn">
+              <span></span>
+            </button>
           <nav id="menu">
+          
             <ul class="menu_nav">
-              <li class="active"><a href="/#accueil">Accueil<div></div></a></li>
-              <li><a href="/#competences">Compétences<div></div></a></li>
-              <li><a href="/#realisations">Réalisations<div></div></a></li>
-              <li><a href="/contact">Contact<div></div></a></li>
+              <li class="nav__list-item"><a class="nav__itel-link" href="/#accueil">Accueil<div></div></a></li>
+              <li class="nav__list-item"><a class="nav__itel-link" href="#competence">Compétences<div></div></a></li>
+              <li class="nav__list-item"><a class="nav__itel-link" href="#real">Réalisations<div></div></a></li>
+              <li class="nav__list-item"><a class="nav__itel-link" href="/contact">Contact<div></div></a></li>
             </ul>
+            
           </nav>
         </header>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+
+            const navBtn = document.querySelector('.nav__btn');
+            var isOpen = false;
+            
+
+            navBtn.addEventListener('click', function() {
+              navBtn.classList.toggle('close');
+              
+            if(isOpen==false){
+               $(".menu_nav").css({"height":"300px"});
+               isOpen = true;
+            }else{
+              $(".menu_nav").css({"height":"0px"});
+               isOpen = false;
+            }
+          
+        
+            })
+          });
+        </script>
 
         {% block body %}{% endblock %}
 

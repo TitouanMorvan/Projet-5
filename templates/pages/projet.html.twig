@@ -1,0 +1,70 @@
+{% extends 'base.html.twig'%}
+
+{% block stylesheets %}
+
+<link rel="stylesheet" href="{{ asset('style/contact.css') }}" />
+
+{% endblock %}
+
+
+{% block header %}
+
+  <img src="{{ asset('images/TM(7).png') }}" />
+
+{% endblock %}
+
+
+{%  block body %}
+
+  <div class="barre"></div>
+    <div class="page-projet">
+      <h2>{{ projets.titre }}</h2>
+        <div class="image-post">
+          <img src="{{ asset('images/projets/' ~ projets.images) }}" alt="" />
+        </div>
+        <div class="description-projet">
+          <p>{{ projets.description }}</p>
+        </div>
+          <h4><button><a href="{{ projets.url }}">Lien vers le site</a></button></h4>
+        <div class="barre1"></div>
+
+        <div class="formulaire1">
+    
+          <form method="POST" action="/addcom/{{ projets.id }}">
+            <h3>ESPACE COMMENTAIRES</h3>
+            <textarea name="commentaire"></textarea>
+            <input class="bouton_comment" type="submit">
+          </form>
+
+        </div>
+
+        {% for commentaire in projets.comments %}
+
+        <div class="commentaire";>
+          <div class="commentaire1">{{ commentaire.texte}}</div>
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+{% endblock %}
+
+
+{% block footer %}
+
+    <div class="footer1">
+    <div class="info">
+      <div class="nom">
+        <p>Titouan Morvan<br>
+        ~<br>
+        Développeur Web</p>
+      </div>
+      <div class="rs">
+        Réseaux Sociaux :
+        <a href="https://www.linkedin.com/in/titouan-morvan-06baa214b/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/1200px-LinkedIn_Logo.svg.png" alt="Logo linkedin"/></a>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

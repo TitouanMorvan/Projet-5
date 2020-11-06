@@ -1,5 +1,4 @@
-{% extends 'base.html.twig'%}
-
+{% extends 'base.html.twig' %}
 
 {% block header %}
 
@@ -7,16 +6,33 @@
 
 {% endblock %}
 
-
 {% block body %}
 
+<div class="barre"></div>
+
+  <h2>PAGE BLACK LIST</h2>
+  <h3>Liste des IP blacklist</h3>
+
+<div class="modo">
+{% for banip in banips %}
+
+  <p>{{ banip.ip }}</p>
+  <a href="/moderateur/nobanip{{ banip.id }}" class="delete_comment2"><i class="fas fa-trash-alt"></i></a>
+
+  <div class="barre3"></div>
+
+{% endfor %}
+</div>
+
+<style>
+     h3 { text-align: center;}
+</style>
 
 {% endblock %}
 
-
 {% block footer %}
 
-    <div class="footer1">
+  <div class="footer1">
     <div class="info">
       <div class="nom">
         <p>Titouan Morvan<br>
@@ -31,3 +47,4 @@
   </div>
 
 {% endblock %}
+

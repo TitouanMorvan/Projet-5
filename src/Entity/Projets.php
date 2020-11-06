@@ -67,6 +67,16 @@ class Projets
      */
     private $updatedAt;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Commentaires::class, mappedBy="projet", cascade={"remove"})
+     */
+    private $comments;
+
+    public function __construct()
+    {
+        $this->comments = new ArrayCollection();
+    }
+
     
 
     public function getId(): ?int
@@ -155,5 +165,36 @@ class Projets
     public function __toString(): string
     {
         return 'qqc??';
+    }
+
+    /**
+     * @return Collection|Commentaires[]
+     */
+    public function getComments(): Collection
+    {
+        return $this->comments;
+    }
+
+    public function addComment(Commentaires $comment): self
+    {
+        if (!$this->comments->contains($comment)) {
+            $this->comments[] = $comment;
+            $comment->setProjet($this);
+        }
+
+        return $this;
+    }
+
+    public function removeComment(Commentaires $comment): self
+    {
+        if ($this->comments->contains($comment)) {
+            $this->comments->removeElement($comment);
+            // set the owning side to null (unless already changed)
+            if ($comment->getProjet() === $this) {
+                $comment->setProjet(null);
+            }
+        }
+
+        return $this;
     }
 }

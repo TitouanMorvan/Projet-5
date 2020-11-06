@@ -7,23 +7,9 @@ easy_admin:
         brand_color: '#34606a'
 
         menu:
-            - { entity: 'Customer', label: 'Compétence Front', icon: 'cubes' }
-            - { entity: 'Competences1', label: 'Compétence Back', icon: 'atom' }
             - { entity: 'Projets', label: 'Projets', icon: 'book' }
+            - { url: '/', label: 'Retour', icon: 'home' }
     entities:
-        Customer:
-            class: App\Entity\Competences
-            label: "Competences"
-            list: 
-                title: "Competences"
-                fields: 
-                    - { property: 'id', label: 'ID' }
-                    - { property: 'titre', label: 'Titre' }
-                    - { property: 'images', label: 'Image', type: 'file' }
-            form: 
-                fields: 
-                     - { property: 'titre', label: 'Titre' }
-                     - { property: 'image', label: 'Image', type: 'file' }
         Projets:
             class: App\Entity\Projets
             label: "Projets"
@@ -31,7 +17,7 @@ easy_admin:
                 title: "Projets"
                 fields: 
                     - { property: 'titre', label: 'Titre' }
-                    - { property: 'images', label: 'Image', type: 'image' , base_path: 'images' }
+                    - { property: 'images', label: 'Image', type: 'image' , base_path: 'images/projets' }
                     - { property: 'description', label: 'Description' }
                     - { property: 'url', label: 'URL' }
             form: 

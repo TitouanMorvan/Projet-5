@@ -15,33 +15,31 @@
 
 {% block body %}
 
-
-
-<div class="barre"></div>
-<div class="intro">
-<h3>FORMULAIRE DE CONTACT</h3>
-<p>Pour toutes questions n'hésitez pas à me contacter via ce formulaire</p>
-</div>
+  <div class="barre"></div>
+  <div class="intro">
+    <h3>FORMULAIRE DE CONTACT</h3>
+    <p>Pour toutes questions n'hésitez pas à me contacter via ce formulaire</p>
+  </div>
   <div class="formulaire">
-  <div id="error"></div>
-    <div class="form">
-    <div>
+    <div id="error"></div>
+      <div class="form">
+      <div>
         <label for="name">NOM :</label>
         <input type="text" id="name" name="user_name">
-    </div>
-    <div>
+      </div>
+      <div>
         <label for="mail">E-MAIL :</label>
         <input type="email" id="mail" name="user_mail">
-    </div>
-    <div>
+      </div>
+      <div>
         <label for="msg">MESSAGE :</label>
         <textarea id="msg" name="user_message"></textarea>
-    </div>
-    <div class="button">
+      </div>
+      <div class="button">
         <button id="button">ENVOYER LE MESSAGE</button>
+      </div>
     </div>
-</div>
-</div>
+  </div>
 
 <script>
 
@@ -60,8 +58,8 @@
         dataType : 'html',
         data : 'name='+name+'&mail='+mail+'&msg='+msg,
         success : function(code_html, statut){ // success est toujours en place, bien sûr !
-            alert('OK');
-            $('#error').html(code_html);
+            
+            $('.formulaire').html('Votre message à bien été envoyé !');
         },
  
         error : function(resultat, statut, erreur){

@@ -1,0 +1,68 @@
+{% extends 'base.html.twig'%}
+
+{% block stylesheets %}
+
+<link rel="stylesheet" href="{{ asset('style/realisations.css') }}" />
+
+{% endblock %}
+
+
+{% block header %}
+
+  <img src="{{ asset('images/TM(7).png') }}" />
+
+{% endblock %}
+
+
+{% block body %}
+<div class="barre"></div>
+  <div class="realisations">
+    <h2>VOILA TOUTES MES REALISATIONS</h2>
+      <p>Découvrez mes réalisations et mes projets !</p>
+
+    <div class="realisation">
+    </div>
+  </div>
+</div>
+
+<div class="diapo">
+  <div class="elements">
+    <div class="element">
+
+    {% for projet in projets %}
+  
+      <div class="projet projetslide"> 
+
+        <div class="bouton-projet">
+          <button><a href="projet/{{ projet.id }}">Lien vers le projet</a></button>
+        </div>
+          <img src="{{ asset('images/projets/' ~ projet.images) }}" alt="" />
+      </div>
+            
+    {% endfor %}
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+
+{% block footer %}
+
+  <div class="footer1">
+    <div class="info">
+      <div class="nom">
+        <p>Titouan Morvan<br>
+        ~<br>
+        Développeur Web</p>
+      </div>
+      
+      <div class="rs">
+        Réseaux Sociaux :
+        <a href="https://www.linkedin.com/in/titouan-morvan-06baa214b/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/1200px-LinkedIn_Logo.svg.png" alt="Logo linkedin"/></a>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

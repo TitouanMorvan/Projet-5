@@ -27,10 +27,13 @@ class Commentaires
      */
     private $ip;
 
+    
+
     /**
-     * @ORM\ManyToOne(targetEntity=Article::class, inversedBy="commentaires")
+     * @ORM\ManyToOne(targetEntity=Projets::class, inversedBy="comments")
+     * @ORM\JoinColumn(nullable=false)
      */
-    private $article;
+    private $projet;
 
     public function getId(): ?int
     {
@@ -61,14 +64,16 @@ class Commentaires
         return $this;
     }
 
-    public function getArticle(): ?Article
+    
+
+    public function getProjet(): ?Projets
     {
-        return $this->article;
+        return $this->projet;
     }
 
-    public function setArticle(?Article $article): self
+    public function setProjet(?Projets $projet): self
     {
-        $this->article = $article;
+        $this->projet = $projet;
 
         return $this;
     }

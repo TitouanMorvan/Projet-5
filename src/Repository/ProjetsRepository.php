@@ -22,19 +22,16 @@ class ProjetsRepository extends ServiceEntityRepository
     // /**
     //  * @return Projets[] Returns an array of Projets objects
     //  */
-    /*
-    public function findByExampleField($value)
+    
+    public function projetSql()
     {
         return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('p.id', 'ASC')
-            ->setMaxResults(10)
+            ->setMaxResults(3)
             ->getQuery()
             ->getResult()
         ;
     }
-    */
+    
 
     /*
     public function findOneBySomeField($value): ?Projets
@@ -44,6 +41,13 @@ class ProjetsRepository extends ServiceEntityRepository
             ->setParameter('val', $value)
             ->getQuery()
             ->getOneOrNullResult()
+
+
+
+
+
+            ->andWhere('p.exampleField = :val')
+            ->setParameter('val', $value)
         ;
     }
     */

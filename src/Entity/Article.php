@@ -29,7 +29,7 @@ class Article
     private $texte;
 
     /**
-     * @ORM\OneToMany(targetEntity=Commentaires::class, mappedBy="article")
+     * @ORM\Column(type="string", length=255)
      */
     private $commentaires;
 
@@ -67,34 +67,17 @@ class Article
         return $this;
     }
 
-    /**
-     * @return Collection|Commentaires[]
-     */
-    public function getCommentaires(): Collection
+    public function getCommentaires(): ?string
     {
         return $this->commentaires;
     }
 
-    public function addCommentaire(Commentaires $commentaire): self
+    public function setCommentaires(string $commentaires): self
     {
-        if (!$this->commentaires->contains($commentaire)) {
-            $this->commentaires[] = $commentaire;
-            $commentaire->setArticle($this);
-        }
+        $this->commentaires = $commentaires;
 
         return $this;
     }
 
-    public function removeCommentaire(Commentaires $commentaire): self
-    {
-        if ($this->commentaires->contains($commentaire)) {
-            $this->commentaires->removeElement($commentaire);
-            // set the owning side to null (unless already changed)
-            if ($commentaire->getArticle() === $this) {
-                $commentaire->setArticle(null);
-            }
-        }
-
-        return $this;
-    }
+    
 }
