@@ -1,5 +1,12 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+
+<link rel="stylesheet" href="{{ asset('style/moderateur.css') }}" />
+<link rel="stylesheet" href="{{ asset('style/responsive.css') }}" />
+
+{% endblock %}
+
 {% block header %}
 
   <img src="{{ asset('images/TM(7).png') }}" />
@@ -26,6 +33,10 @@
 
 {% endfor %}
   </div>
+
+  <div class="bouton-moderateur">
+      <button><a href="/moderateur/blacklist">Voir les blacklist</a></button>
+    </div>
 
 <style>
      h3 { text-align: center;}

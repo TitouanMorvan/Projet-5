@@ -27,6 +27,13 @@ class Commentaires
      */
     private $ip;
 
+     /**
+     * @ORM\Id()
+     */
+    private $projet_id;
+
+
+
     
 
     /**
@@ -63,6 +70,18 @@ class Commentaires
 
         return $this;
     }
+
+
+
+
+    public function getProjet_id(): ?int
+    {
+        return $this->projet_id;
+    }
+
+    
+
+
 
     
 

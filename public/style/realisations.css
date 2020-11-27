@@ -1,0 +1,60 @@
+/* PAGE AVEC TOUT LES PROJETS */
+
+.realisations > p {
+    text-align: center;
+    font-size: 1em;
+    color: #a1a1a1;
+    margin-top: -20px;
+}
+  
+.realisations {
+    margin-top: 90px;
+  }
+
+  .diapo {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .elements{
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+  }
+  
+  .element{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .element > img{
+    width: 100%;
+  }
+
+  .projetslide{
+    margin: 0 200px;
+  }
+
+  .bouton-projet button {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: solid 1px silver;
+    text-align: center;
+    height: 40px;
+    font-size: 1em;
+    margin-top: 15px;
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.bouton-projet a {
+  text-decoration: none;
+      color: white;
+}

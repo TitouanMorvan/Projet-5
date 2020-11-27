@@ -75,18 +75,6 @@ class Competences1
         return $this;
     }
 
-    
-
-    /*public function getImage()
-    {
-        return $this->image;
-    }
-
-    /*public function setImage(?string $image)
-    {
-        $this->image = $image;
-
-    }*/
 
     public function setImageSize(?int $imageSize): void
     {

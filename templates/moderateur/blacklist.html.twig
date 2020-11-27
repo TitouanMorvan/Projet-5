@@ -1,5 +1,12 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+
+<link rel="stylesheet" href="{{ asset('style/blacklist.css') }}" />
+<link rel="stylesheet" href="{{ asset('style/responsive.css') }}" />
+
+{% endblock %}
+
 {% block header %}
 
   <img src="{{ asset('images/TM(7).png') }}" />
@@ -17,12 +24,16 @@
 {% for banip in banips %}
 
   <p>{{ banip.ip }}</p>
-  <a href="/moderateur/nobanip{{ banip.id }}" class="delete_comment2"><i class="fas fa-trash-alt"></i></a>
+  <a href="/moderateur/nobanip/{{ banip.id }}" class="delete_comment2"><i class="fas fa-trash-alt"></i></a>
 
   <div class="barre3"></div>
 
 {% endfor %}
 </div>
+
+<div class="bouton-moderateur">
+      <button><a href="/moderateur">Voir les commentaires</a></button>
+    </div>
 
 <style>
      h3 { text-align: center;}

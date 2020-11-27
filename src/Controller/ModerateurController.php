@@ -72,15 +72,15 @@ class ModerateurController extends AbstractController
     }
 
     /**
-     * @Route("/moderateur/nobanip", name="nobanip")
+     * @Route("/moderateur/nobanip/{id}", name="nobanip")
      */
     public function noBanIp(BanIpRepository $banIpRepository, Request $request)
     {
 
         //Affiche la liste des commentaires de chaque article
-        $banips = $banIpRepository->findOneBy(["ip" => $request->get('ip')]);
+        $banips = $banIpRepository->findOneBy(["id" => $request->get('id')]);
         $em = $this->getDoctrine()->getManager();
-        $em->remove($ip);
+        $em->remove($banips);
         $em->flush();
 
         return $this->redirect('/moderateur');

@@ -1,0 +1,19 @@
+/* PAGE CONNEXION ADMIN */
+
+.formulaire1{
+    width: 500px;
+    height: auto;
+    text-align: center;
+    box-shadow: 0px 5px 5px silver;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  
+  
+  
+  .formulaire1 div{
+    width: 90%;
+    margin: 20px auto;
+  }
+

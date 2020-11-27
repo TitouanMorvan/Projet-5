@@ -1,3 +1,5 @@
+/* PAGE FORMULAIRE DE CONTACT */
+
 .formulaire{
     width: 500px;
     height: auto;
@@ -71,75 +73,11 @@
 
 
 
-.page-projet {
-    max-width: 1000px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
 
-.formulaire1 {
-    width: 500px;
-    height: auto;
-    text-align: left;
-    box-shadow: 0px 5px 5px silver;
-    margin: 0 auto;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    margin-top: 100px;
-}
 
-.formulaire1 input{
-    display: block;
-    width: 60%;
-    margin: 0 auto;
-    border-radius: 5px;
-    border: solid 1px silver;
-    text-align: center;
-    height: 25px;
-    font-size: 1em;
-    margin-top: 15px;
-    background-color: #34606a;
-    color: white;
-    cursor: pointer;
-}
 
-.formulaire1 textarea{
-    display: block;
-    width: 80%;
-    margin: 0 auto;
-    border-radius: 5px;
-    border: solid 1px silver;
-    text-align: center;
-    font-size: 1em;
-}
 
-.formulaire1 h3 {
-    text-align: center;
-    color: grey;
-}
 
-.commentaire{
-    text-align: center;
-    background-color: #ededed;
-    margin: 20px;
-    box-shadow: 3px 3px grey;
-    height: 50px;
-    line-height: 0.7;
-    width: 35%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
-    box-sizing: border-box;
-    border: none;
-    border-bottom: 1px solid #34606a;
-  }
-
-.commentaire1 {
-    margin: 0 auto;
-    padding-top: 12px;
-    line-height: 1em;
-}
 
 .barre1 {
     height: 1px;
@@ -177,3 +115,25 @@
     max-width: 70%;
 	height: auto;
   }
+
+
+  @media screen and (max-width: 500px){
+
+  .formulaire{
+    width: auto;
+  }
+
+  .formulaire1{
+    width: auto;
+  }
+
+  .page-projet button{
+    width: 40%;
+  }
+
+  .commentaire{
+      width: auto;
+      height: auto;
+  }
+
+ }

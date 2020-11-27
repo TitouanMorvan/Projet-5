@@ -1,0 +1,43 @@
+/* PAGE MODERATEUR / GESTIONS DES COMMENTAIRES */
+
+.modo {
+    text-align: center;
+    padding-top: 5px;
+    line-height: 2em;
+  }
+
+  .barre {
+    height: 1px;
+    color: #34606a;
+    width: 110%;
+    position: absolute;
+    z-index: 1000;
+    background-color: #34606a;
+    margin-left: -10px;
+  }
+
+  .barre3 {
+    height: 1px;
+    color: #34606a;
+    width: 40%;
+    z-index: 1000;
+    background-color: black;
+    margin-left: 30%;
+    margin-top: 5px;
+  }
+
+  .delete_comment2 {
+    border-radius: 20px;
+    background-color: #e54040;
+    padding: 5px 7px;
+    text-decoration: none;
+    color: white;
+  }
+
+  .ban_ip {
+    border-radius: 20px;
+    background-color: black;
+    padding: 5px 7px;
+    text-decoration: none;
+    color: white;
+  }

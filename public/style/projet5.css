@@ -300,11 +300,6 @@ h2 {
 
 
 
-
-
-
-
-
 .realisations > p {
   text-align: center;
   font-size: 1em;
@@ -315,6 +310,11 @@ h2 {
 .realisations {
   margin-top: 90px;
 }
+
+
+
+
+
 
 .realisations1 {
   margin-top: 90px;
@@ -408,9 +408,7 @@ h2 {
 
 }
 
-.projetslide{
-  margin: 0 200px;
-}
+
 
 #button-left {
   position: absolute;
@@ -646,59 +644,36 @@ width: 90px;
   margin-left: -10px;
 }
 
-.erreur > h2{
-  color: red;
-  margin-top: 145px;
+.diapo {
+  position: relative;
+  overflow: hidden;
 }
 
-.p-erreur{
-  margin-left: 37%;
+.elements{
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
 }
 
-.bouton-erreur{
-  width: 90%;
-  height: auto;
-  margin-bottom: 420px;
+.element{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
 }
 
-.bouton-erreur > a{
-  height: 40px;
-    width: 250px;
-    display: block;
-    color: white;
-    background-color: #34606a;
-    border-radius: 5px;
-    margin: 0 auto;
-    font-size: 1em;
-    transition: 0.3s;
-    text-align: center;
-    line-height: 40px;
+.element > img{
+  width: 100%;
 }
 
 
 
 
-.bouton-projet button {
-    display: block;
-    width: 50%;
-    margin: 0 auto;
-    border-radius: 5px;
-    border: solid 1px silver;
-    text-align: center;
-    height: 40px;
-    font-size: 1em;
-    margin-top: 15px;
-    background-color: grey;
-    color: white;
-    cursor: pointer;
-    text-decoration: none;
-    margin-bottom: 10px;
-}
 
-.bouton-projet a {
-  text-decoration: none;
-      color: white;
-}
+
+
+
+
 
 
 
@@ -726,6 +701,34 @@ text-decoration: none;
 
 
 .bouton-realisations:hover {
+  transform: scale(1.1);
+    box-shadow: 0px 10px 10px white;
+}
+
+.bouton-moderateur button {
+  display: block;
+  width: 20%;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: solid 1px silver;
+  text-align: center;
+  height: 40px;
+  font-size: 1em;
+  margin-top: 15px;
+  background-color: white;
+  color: #34606a;
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.bouton-moderateur a {
+text-decoration: none;
+    color: #34606a;
+}
+
+
+.bouton-moderateur:hover {
   transform: scale(1.1);
     box-shadow: 0px 10px 10px white;
 }
@@ -836,62 +839,49 @@ svg {
 
 
 
-.diapo {
-  position: relative;
-  overflow: hidden;
-}
 
-.elements{
-  display: flex;
-  flex-wrap: nowrap;
-  position: relative;
-}
 
-.element{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+
+
+
+
+.bouton-projet button {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: solid 1px silver;
   text-align: center;
-}
-
-.element > img{
-  width: 100%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.delete_comment2 {
-  border-radius: 20px;
-  background-color: #e54040;
-  padding: 5px 7px;
-  text-decoration: none;
+  height: 40px;
+  font-size: 1em;
+  margin-top: 15px;
+  background-color: grey;
   color: white;
-}
-
-.modo {
-  text-align: center;
-  padding-top: 5px;
-  line-height: 2em;
-}
-
-.ban_ip {
-  border-radius: 20px;
-  background-color: black;
-  padding: 5px 7px;
+  cursor: pointer;
   text-decoration: none;
-  color: white;
+  margin-bottom: 10px;
 }
+
+.bouton-projet a {
+text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+.projetslide{
+  margin: 0 200px;
+}
+
+
+
+
+
+
+
+
 
 .barre3 {
   height: 1px;
@@ -921,22 +911,7 @@ svg {
 
 
 
-.formulaire1{
-  width: 500px;
-  height: auto;
-  text-align: center;
-  box-shadow: 0px 5px 5px silver;
-  margin: 0 auto;
-  padding-bottom: 10px;
-  padding-top: 10px;
-}
 
-
-
-.formulaire1 div{
-  width: 90%;
-  margin: 20px auto;
-}
 
 
 .button1 {
@@ -1058,6 +1033,7 @@ svg {
   .nav__btn{
     display: block;
     top: 50px;
+    right: 10px;
   }
 
   .nav__item-link{
@@ -1086,6 +1062,7 @@ svg {
     height: auto;
     width: auto; 
     min-height: 0;
+    z-index: 1000;
   }
 }
 
@@ -1171,6 +1148,10 @@ svg {
 @media screen and (max-width: 850px){
   
   .logo-slide > .p1{
+    display: none;
+  }
+
+  .barre1{
     display: none;
   }
 
@@ -1279,5 +1260,17 @@ svg {
   .projetslide{
     margin: 0;
   }
+
+  #logo > img{
+    height: 240px;
+    margin-top: -70px;
+  }
+
+  .projet > img{
+    max-width: 75.9%;
+    box-shadow: 1px 1px 0px #34606a;
+  }
+
+
 
 }
