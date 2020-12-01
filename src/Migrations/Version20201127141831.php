@@ -26,7 +26,7 @@ final class Version20201127141831 extends AbstractMigration
         $this->addSql('ALTER TABLE commentaires DROP FOREIGN KEY FK_D9BEC0C4597A6CB7');
         $this->addSql('DROP INDEX IDX_D9BEC0C4597A6CB7 ON commentaires');
         $this->addSql('ALTER TABLE commentaires ADD projet_id INT NOT NULL, DROP projets_id');
-        $this->addSql('ALTER TABLE commentaires ADD CONSTRAINT FK_D9BEC0C4C18272 FOREIGN KEY (projet_id) REFERENCES projets (id)');
+        
         $this->addSql('CREATE INDEX IDX_D9BEC0C4C18272 ON commentaires (projet_id)');
         $this->addSql('ALTER TABLE user ADD roles LONGTEXT DEFAULT NULL COMMENT \'(DC2Type:array)\'');
     }
